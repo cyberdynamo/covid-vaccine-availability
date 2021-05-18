@@ -1,0 +1,131 @@
+<%- include("partials/header"); -%>
+<div class="container-contact100">
+	<div class="wrap-contact100">
+		<form class="contact100-form validate-form">
+			<span class="contact100-form-title">About this Project:</span>
+		</form>
+        <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+        <ol>
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				This Unofficial portal helps you to find a Vacciniation center with an available slot in your Pincode/District.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				Once you find an available slot, you can log-in/sign-up to the Official portal of <strong><a href="https://selfregistration.cowin.gov.in/" style="font-size: larger;">Co-WIN</a></strong> and book your appropriate slot.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				<strong>
+					Official portal is not very friendly with Mobile devices:
+				</strong>
+				one have to download the Co-WIN app for better view in Mobiles whereas this portal is optimzed for better view in Mobiles.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				<strong>
+					It does not show the unavailable slots/booked slots:
+				</strong>
+				In Official portal unavailable slots/booked slots are being mixed with available slots making it difficult to lookup the entire data.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				Filters the available slots with a given date entered by user.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				<strong>
+					User can share available slots to other users:
+				</strong>
+				Printing facility is available on top of the page, user can print and share the slots with other users via Social plateforms. This will decrese traffic on Official Portal.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				<strong>
+					Official Portal Doesnt show the Vaccine Prices in PAID centers:
+				</strong>
+				whereas in this Portal one can view the Vaccine prices for PAID centers.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				Created using the Co-WIN Public API. You can browse Co-WIN APIs <strong><a href="https://apisetu.gov.in/public/marketplace/api/cowin" style="font-size: larger;">here.</a></strong>
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				This project Will soon open-sourced and available for user contributions
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+			<li>
+				<i class="fa fa-check fa-2x"></i>
+				This is just a initial release. More features will be added in next releases.
+			</li>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+            <li>
+				<i class="fa fa-check fa-2x"></i>
+				If you have any Feedback/Suggestions, <strong><a href="https://forms.gle/QzmbXoBSx19ZLqWS7" style="font-size: larger;">Submit here.</a></strong>
+			</li>
+        </ol>
+
+		<div class="container-contact100-form-btn">
+            <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                <a href="/">
+					<button class="contact100-form-btn">
+						<span>
+							Back to Home Page
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+                	</button>
+                </a>
+            </div>
+        </div>
+		
+        <br>
+
+		<blockquote class="blockquote text-right">
+            <footer class="blockquote-footer">
+				<i class="fa fa-code fa-lg"></i>
+				with
+				<i class="fa fa-heart fa-lg"></i>
+				by
+				<strong>Kritansh Mehrotra</strong>
+			</footer>
+        </blockquote>
+
+	</div>
+</div>
+<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="/vendor/animsition/js/animsition.min.js"></script>
+<script src="/vendor/bootstrap/js/popper.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/select2/select2.min.js"></script>
+<script>
+	$(".selection-2").select2({
+		minimumResultsForSearch: 20,
+		dropdownParent: $('#dropDownSelect1')
+	});
+</script>
+<script src="/vendor/daterangepicker/moment.min.js"></script>
+<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+<script src="/vendor/countdowntime/countdowntime.js"></script>
+<script src="/js/main.js"></script>
+<%- include("partials/footer") -%>

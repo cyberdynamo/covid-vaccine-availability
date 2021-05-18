@@ -1,0 +1,203 @@
+<%- include("partials/header"); -%>
+<script>
+    
+    function report4(data){
+        console.log(typeof(data.sessions))
+        if(data.sessions.length == 0){
+            window.location.replace("/error");
+        }
+
+        var abc = data.sessions[0].district_name;
+        var xyz = data.sessions[0].state_name;
+        document.getElementById("MNOPQR").innerHTML = `${abc}, ${xyz}`;
+
+        data.sessions.forEach(function(center){
+
+            var centerName = center.name;
+            var centerAvailableAapacity = center.available_capacity;
+            var centerVaccine = center.vaccine;
+            var centerMminAgeLimit = center.min_age_limit;
+            var centerFeeType = center.fee_type;
+            var centerFee = center.fee;
+            var centerPinCode = center.pincode;
+            var blockName = center.block_name;
+
+            document.getElementById("ParentDiv").innerHTML += `
+            <div class="card mb-5">
+                <div class="card-header">
+                    <strong>${centerName}, </strong><br>
+                    <span class="text-primary">
+                        <strong>${blockName},</strong> ${centerPinCode}
+                    </span>
+                </div>
+
+                <div class="card-body text-primary">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="card-title">
+                                <div href="#" class="btn btn-primary">Available:
+                                    <strong>
+                                        ${centerAvailableAapacity}
+                                    </strong> 
+                                </div>   
+                            </h5>
+                        </div>
+
+                        <div class="col-6">
+                            <strong>${centerVaccine}</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Age Limit: </strong>${centerMminAgeLimit}+
+                        </div>
+
+                        <div class="col-6">
+                            <strong>Fee: </strong>${center.fee}/-
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    }
+
+    function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
+    function getDate() {
+        const d = getParameterByName('date');
+        return d.split('-').reverse().join('-')
+    }
+
+    if(getParameterByName("typeOfSearch") == 0){
+        var URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=";
+        var pincode = getParameterByName('pincode');
+        URL += (pincode + "&date=");
+        var date = getDate();
+        URL += date;
+
+        fetch(URL).then(response => response.json()).then(data => report4(data));
+    }
+    else if(getParameterByName("typeOfSearch") == 1){
+        var URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=";
+        var district = getParameterByName('district_id');
+        URL += (district + "&date=");
+        var date = getDate();
+        URL += date;
+
+        fetch(URL).then(response => response.json()).then(data => report4(data));
+    }
+
+</script>
+
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <form class="contact100-form validate-form">
+            <span class="contact100-form-title" id="MNOPQR"></span>
+        </form>
+
+
+        <div class="container-contact100-form-btn">
+            <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                    <button class="contact100-form-btn" onClick="window.print()">
+                        <span>
+                            Print and Share
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                    </button>
+            </div>
+        </div>
+        <br>
+
+        <div id="ParentDiv"></div>
+
+        <div class="container-contact100-form-btn">
+            <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                <a href="/">
+                    <button class="contact100-form-btn">
+                        <span>
+                            Search Again
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div id="clockbox" class="text-primary"></div>
+
+        <script type="text/javascript">
+            var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
+            var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+            if(nhour==0){ap=" AM";nhour=12;}
+            else if(nhour<12){ap=" AM";}
+            else if(nhour==12){ap=" PM";}
+            else if(nhour>12){ap=" PM";nhour-=12;}
+
+            if(nmin<=9) nmin="0"+nmin;
+
+            var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+" "+nhour+":"+nmin+ap+"";
+            return clocktext;
+            }
+
+            function getParameterByName(name) {
+                var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+                return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+            }
+
+            function getDate() {
+                const d = getParameterByName('date');
+                return d.split('-').reverse().join('-')
+            }
+
+            GetClock();
+            document.getElementById('clockbox').innerHTML += `
+                <span>
+                    Slots for ${getDate()}, Fetched on: ${GetClock()}
+                </span>`
+                ;
+        </script>
+
+        <blockquote class="blockquote text-right">
+            <footer class="blockquote-footer btn">
+				<a href="/about" style="font-size: medium; font-weight: 200;" class="btn btn-info">[About this Project]</a>
+			</footer>
+            <footer class="blockquote-footer">
+                <i class="fa fa-code fa-lg"></i>
+                with
+                <i class="fa fa-heart fa-lg"></i>
+                by
+                <strong>Kritansh Mehrotra</strong>
+            </footer>
+        </blockquote>
+    </div>
+</div>
+
+<div id="dropDownSelect1"></div>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script>
+    $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+    });
+</script>
+<script src="vendor/daterangepicker/moment.min.js"></script>
+<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<script src="vendor/countdowntime/countdowntime.js"></script>
+<script src="js/main.js"></script>
+<%- include("partials/footer");-%>

@@ -1,0 +1,53 @@
+<%- include("partials/header"); -%>
+<div class="container-contact100">
+	<div class="wrap-contact100">
+		<form class="contact100-form validate-form" action="/mainPage" method="GET">
+			<span class="contact100-form-title">No Slots available based on given data.</span>
+			<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+		</form>
+		<br>
+		<div class="container-contact100-form-btn">
+            <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                <a href="/">
+					<button class="contact100-form-btn">
+						<span>
+							Search Again
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+                </a>
+            </div>
+        </div>
+        <br>
+        <blockquote class="blockquote text-right">
+			<footer class="blockquote-footer btn">
+				<a href="/about" style="font-size: medium; font-weight: 200;" class="btn btn-info">[About this Project]</a>
+			</footer>
+			<footer class="blockquote-footer">
+				<i class="fa fa-code fa-lg"></i>
+				with
+				<i class="fa fa-heart fa-lg"></i>
+				by
+				<strong>Kritansh Mehrotra</strong>
+			</footer>
+        </blockquote>
+	</div>
+</div>
+<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="/vendor/animsition/js/animsition.min.js"></script>
+<script src="/vendor/bootstrap/js/popper.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/select2/select2.min.js"></script>
+<script>
+	$(".selection-2").select2({
+		minimumResultsForSearch: 20,
+		dropdownParent: $('#dropDownSelect1')
+	});
+</script>
+
+<script src="/vendor/daterangepicker/moment.min.js"></script>
+<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+<script src="/vendor/countdowntime/countdowntime.js"></script>
+<script src="/js/main.js"></script>
+<%- include("partials/footer") -%>
