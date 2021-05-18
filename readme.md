@@ -50,7 +50,7 @@ You can provide feedback or report any Bugs using:
 
 ## Development
 
-Want to contribute? Great!
+###Want to contribute? Great!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License ![APM](https://img.shields.io/apm/l/npm?style=social) 
