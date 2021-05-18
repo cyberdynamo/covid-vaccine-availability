@@ -4,8 +4,6 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
 [![https://nodei.co/npm/express.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/express.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/express)
-[![https://nodei.co/npm/express.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/ejs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ejs)
-
 
 ## Features over official portal:
 
@@ -51,7 +49,7 @@ You can provide feedback or report any Bugs using:
 
 ## Development
 
-### Want to contribute? Great!
+#### Want to contribute? Great!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License ![APM](https://img.shields.io/apm/l/npm?style=social) 
