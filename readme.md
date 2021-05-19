@@ -20,7 +20,6 @@ This portal uses a number of open source projects to work properly:
 
 - [node.js] - evented I/O for the backend
 - [Express] - fast node.js network app framework
-- [AngularJS] - HTML enhanced for web apps!
 - [ejs] - Embedded JavaScript templates
 - [Twitter Bootstrap] - great UI boilerplate for modern web apps
 - [jQuery] - making js easy
@@ -49,7 +48,7 @@ Project is live on Heroku platform. View using below link:
 
 ## Feedback
 
-You can provide feedback or report any Bugs using this [Google Form].
+You can provide feedback or report any bugs using this [Google Form].
 
 
 ## Development
@@ -65,16 +64,13 @@ MIT
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+
    [john gruber]: <http://daringfireball.net>
    [df1]: <http://daringfireball.net/projects/markdown/>
    [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
    [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
    [ejs]: <https://www.npmjs.com/package/ejs>
