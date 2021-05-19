@@ -1,7 +1,7 @@
 # COVID-19 vaccine availability checker
 ##### _Unofficial portal, helps you to find a Vacciniation center with an available slot in your Pincode/District._ 
 &NewLine;
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]() [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
 [![https://nodei.co/npm/express.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/ejs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ejs)
 
@@ -10,8 +10,8 @@
 - More friendly with Mobile Devices.
 - **It does not show the unavailable slots/booked slots:** In Official portal unavailable slots/booked slots are being mixed with available slots making it difficult to lookup the entire data.
 - Filters the available slots with a given date entered by user.
-- **User can share available slots to other users:** Printing facility is available on top of the page, user can print and share the slots with other users via Social plateforms. This will decrese traffic on Official Portal.
-- **Official Portal Doesnt show the Vaccine Prices in PAID centers:** whereas in this Portal one can view the Vaccine prices for PAID centers.
+- **User can share available slots to other users:** Printing facility is available on top of the page, user can print and share the slots with other users via social plateforms. This will decrese traffic on Official Portal.
+- **Official portal doesn't show the Vaccine prices in PAID centers:** whereas in this portal one can view the Vaccine prices for PAID centers.
 
 
 ## Tech
