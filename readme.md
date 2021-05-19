@@ -49,7 +49,7 @@ Project is live on Heroku platform. View using below link:
 
 ## Feedback
 
-You can provide feedback or report any Bugs using this [Google Form](#https://forms.gle/QzmbXoBSx19ZLqWS7)
+You can provide feedback or report any Bugs using this [Google Form].
 
 
 ## Development
@@ -78,3 +78,4 @@ MIT
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
    [ejs]: <https://www.npmjs.com/package/ejs>
+   [Google Form]: <https://forms.gle/QzmbXoBSx19ZLqWS7>
