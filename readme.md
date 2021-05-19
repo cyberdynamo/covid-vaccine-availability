@@ -7,10 +7,10 @@
 
 ## Features over official portal:
 
-- More friendly with Mobile Devices.
+- More friendly with Mobile devices.
 - **It does not show the unavailable slots/booked slots:** In Official portal unavailable slots/booked slots are being mixed with available slots making it difficult to lookup the entire data.
 - Filters the available slots with a given date entered by user.
-- **User can share available slots to other users:** Printing facility is available on top of the page, user can print and share the slots with other users via social plateforms. This will decrese traffic on Official Portal.
+- **User can share available slots to other users:** Printing facility is available on top of the page, user can print and share the slots with other users via social plateforms. This will decrese traffic on Official portal.
 - **Official portal doesn't show the Vaccine prices in PAID centers:** whereas in this portal one can view the Vaccine prices for PAID centers.
 
 
@@ -39,13 +39,18 @@ npm install ejs --save
 node app.js
 ```
 
-## Feedback
+## Deployment
 
-You can provide feedback or report any Bugs using:
+Project is live on Heroku platform. View using below link:
 
 | Service | Link |
 | ------ | ------ |
-| Google form | [https://forms.gle/QzmbXoBSx19ZLqWS7]|
+| Heroku | [http://take-vaccine.herokuapp.com/]|
+
+## Feedback
+
+You can provide feedback or report any Bugs using this [Google Form](#https://forms.gle/QzmbXoBSx19ZLqWS7)
+
 
 ## Development
 
